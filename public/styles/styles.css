@@ -1,0 +1,219 @@
+.ui.vertical.menu.sidebar-menu{
+    border-radius: 0px;
+    margin-top: 40px !important;
+    max-height: calc(100% - 40px) !important;
+    height: calc(100% - 40px) !important;
+    box-shadow: 1px 5px 8px 0px #333;
+}
+.ui.vertical.menu .active.item {
+    /* background-color: #062844 !important; */
+    /* color: antiquewhite !important; */
+    color: rgb(1, 90, 255) !important;
+}
+
+.side-open{
+    visibility: initial !important;
+    width: 80% !important;
+}
+
+.eq-card.ui.card {
+    flex: 1; /* Shrink and grow according to available height */
+    flex-basis: 0;
+    height: 100%;
+  }
+.main-content::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(65, 65, 65, 0.589);
+}
+.main-content{
+    margin-top:40px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; 
+    height: 150vh;
+    overflow-y: auto;
+    position: relative;
+    /* background:#12407c; */
+    background-image: url('/public/assets/pictures/bs.svg');
+    background-size: 250px;
+}
+
+body{
+    background-color: hsl(0, 0%, 97%);
+}
+
+.main-content *{
+    font-size: 12px;
+    
+}
+.loader-wrapper{
+    display: block;
+    position: fixed !important;
+    top:0;left: 0;
+    width: 100% !important; height: 100% !important;
+    z-index: 99999;
+    border: none !important;
+    margin: 0 !important;
+    opacity: .7 !important;
+}
+.deactivate{
+    pointer-events: none;
+    opacity: .6;
+}
+
+.row.grid-info>div{
+    margin: 0;
+    margin-right: 20px ;
+    /* flex: 1 1 0; */
+}
+.statistics-wrapper{
+    background-color: hsl(207, 84%, 15%) !important;
+}
+.ui.statistics .value{
+    color: white !important;
+}
+.ui.statistics .label{
+    color: rgb(170, 170, 170) !important;
+}
+
+.color-green{
+    color: green;
+}
+.color-red{
+    color: red;
+}
+/* .ui.accordion .content.active{
+    min-height: 300px !important;
+} */
+
+tr td,
+tr th,
+.transactions-table tr td,
+.transactions-table tr th
+{
+    border-left: none !important;
+}
+.users-table {
+    margin-bottom: 2em !important;
+} 
+table tr:hover td , 
+table tr:hover td.positive:nth-child(5),  
+table tr:hover td.negative:nth-child(5)
+{
+    background: #334 !important;
+    color: white !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+
+/* clients */
+form.client-form .fields{
+    flex-wrap: wrap !important;
+}
+form.client-form .fields .field{
+    min-width: 230px !important;
+    max-width: 300px !important;
+    flex-grow: 1 !important;
+}
+/* /clients  */
+.custom-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .3em;
+}
+
+.custom-header > i{
+    margin-right: 0.25rem !important;
+    line-height: 1.1 !important;
+    font-size: 18px !important;
+}
+
+.custom-header > .spacer, .spacer{
+    flex: 1 1 auto;
+}
+.table-header-double-line{
+    display: flex;
+    justify-content: space-evenly;
+}
+.table-header-double-line > *{
+    display: inline;
+    padding: 0; margin: 0;
+}
+
+
+
+/* devices */
+.main-content.devices .ui.segment {
+    margin-top: 1em; 
+    overflow-x: auto;
+}
+.main-content.devices .devices-search{
+    width: 116px;
+    background-color: rgba(31, 161, 31, 0.5) !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: end !important;
+}
+.devices-table tbody tr.used{
+    color: orange !important;
+}
+
+
+/* /devices */
+
+@media ( min-width:768px){
+    .ui.vertical.menu.sidebar-menu{
+        visibility: visible;
+        transform: translate3d(0,0,0);
+    }
+
+    .main-content{
+        margin-left: 15rem;
+    }
+    .sidebar-menu-toggler{
+        display: none !important;
+    }
+}
+
+@media (max-width:540px){
+
+    .row.grid-info{
+        flex-wrap: wrap;
+        flex-flow: initial !important;
+        align-items: flex-end !important;
+    }
+    .row.grid-info > div{ flex: 1 1 0 !important;}
+}
+
+@media print{
+    *{
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        
+    }
+
+    #sidebar,
+    nav{
+        display: none !important;
+        visibility: none !important;
+    }
+
+
+}

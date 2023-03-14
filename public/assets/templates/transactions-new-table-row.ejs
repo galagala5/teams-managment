@@ -1,0 +1,27 @@
+<%if(typeof data ==='object' && data.length>=1){%>
+  <%for(let d of data){%>
+    <tr data-number=<%=d.number%> >
+      <td class="left aligned collapsing"><%=d.number%></td>
+      <td class="left aligned collapsing"><%=d.product.title%></td>
+      <td class="left aligned collapsing"><%=d.type==='incomming'?'Εισαγωγή':d.type==='outgoing'?'Εξαγωγή':''%></td>
+      <td class="center aligned collapsing" data-quantity="1" ><%=d.quantity%></td>
+      <td class="left aligned collapsing"><%=d.createdAt%></td>
+      <td class="left aligned collapsing"><%=d.description%></td>
+      <td class="center aligned collapsing">
+        <button class="ui negative button" onclick="minusOne(event)"><i class="minus square icon"></i></button>
+      </td>
+    </tr>
+    <%}%>
+    <%}else{%>
+      <tr data-number=<%=data.number%> >
+        <td class="left aligned collapsing"><%=data.number%></td>
+        <td class="left aligned collapsing"><%=data.product.title%></td>
+        <td class="left aligned collapsing"><%=data.type%></td>
+        <td class="center aligned collapsing" data-quantity="1"><%=data.quantity%></td>
+        <td class="left aligned collapsing"><%=data.createdAt%></td>
+        <td class="left aligned collapsing"><%=data.description%></td>
+        <td class="center aligned collapsing">
+          <button class="ui negative button" onclick="minusOne(event)"><i class="minus square icon"></i></button>
+        </td>
+  </tr>
+<%}%>
